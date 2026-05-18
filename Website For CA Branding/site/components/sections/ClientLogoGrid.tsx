@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const logos = [
+const logos: { src: string; alt: string; tall?: boolean }[] = [
   { src: '/assets/Clients/iValue.webp',                                  alt: 'iValue — Client of Change Agents' },
   { src: '/assets/Clients/Array Networks.webp',                          alt: 'Array Networks — Client of Change Agents' },
   { src: '/assets/Clients/R&M.webp',                                     alt: 'R&M — Client of Change Agents' },
@@ -22,20 +22,20 @@ const logos = [
   { src: '/assets/Clients/Suse.webp',                                    alt: 'SUSE — Client of Change Agents' },
   { src: '/assets/Clients/TECHNOBIND.webp',                              alt: 'Technobind — Client of Change Agents' },
   { src: '/assets/Clients/WatchGaurd.webp',                              alt: 'WatchGuard — Client of Change Agents' },
-  { src: '/assets/Clients/WinMagic.webp',                                alt: 'WinMagic — Client of Change Agents' },
+  { src: '/assets/Clients/WinMagic.webp',                                alt: 'WinMagic — Client of Change Agents', tall: true },
 ]
 
 export default function ClientLogoGrid() {
   return (
     <div className="flex flex-wrap gap-x-10 gap-y-8 mt-10">
       {logos.map((logo) => (
-        <div key={logo.alt} className="flex items-center justify-center h-10">
+        <div key={logo.alt} className={`flex items-center justify-center ${logo.tall ? 'h-16' : 'h-10'}`}>
           <Image
             src={logo.src}
             alt={logo.alt}
             width={120}
             height={40}
-            className="h-10 w-auto object-contain grayscale opacity-50 hover:opacity-90 transition-opacity duration-300"
+            className={`${logo.tall ? 'h-16' : 'h-10'} w-auto object-contain grayscale opacity-50 hover:opacity-90 transition-opacity duration-300`}
           />
         </div>
       ))}

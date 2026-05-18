@@ -110,8 +110,8 @@ export default function InnerPageHero({
                 className={cn(
                   'inline-block font-medium text-cta px-6 py-3 border rounded transition-all duration-200',
                   isLightBg
-                    ? 'border-[#52606D] text-[#111827] bg-white/20 hover:bg-white/30'
-                    : 'border-white/30 text-white bg-white/5 hover:bg-white/10 hover:border-white/50'
+                    ? 'no-underline border-[#52606D] text-[#111827] bg-white/20 hover:bg-white/30'
+                    : 'no-underline border-white/30 text-white bg-white/5 hover:bg-white/10 hover:border-white/50'
                 )}
               >
                 {ctaText} &rarr;

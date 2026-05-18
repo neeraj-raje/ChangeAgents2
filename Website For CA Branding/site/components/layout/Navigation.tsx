@@ -36,7 +36,7 @@ export default function Navigation() {
         {/* Top Row: Logo + Tagline */}
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-end justify-between py-4">
           <div className="flex items-end gap-6">
-            <Link href="/" className="flex-shrink-0" aria-label="Change Agents — Home">
+            <Link href="/" className="flex-shrink-0 no-underline" aria-label="Change Agents — Home">
               <Image
                 src="/assets/logo/ChangeAgents_Logo_new.png"
                 alt="Change Agents"
@@ -71,7 +71,7 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-base text-[#52606D] hover:opacity-60 transition-opacity duration-200 whitespace-nowrap"
+              className="no-underline text-base text-[#52606D] hover:opacity-60 transition-opacity duration-200 whitespace-nowrap"
             >
               {link.label}
             </Link>
@@ -94,7 +94,7 @@ export default function Navigation() {
           >
             {/* Overlay header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-rule">
-              <Link href="/" onClick={() => setMenuOpen(false)} aria-label="Change Agents — Home">
+              <Link href="/" onClick={() => setMenuOpen(false)} className="no-underline" aria-label="Change Agents — Home">
                 <Image
                   src="/assets/logo/ChangeAgents_Logo_new.png"
                   alt="Change Agents"
@@ -127,7 +127,7 @@ export default function Navigation() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-base text-ink hover:opacity-60 transition-opacity duration-200 block"
+                    className="no-underline text-base text-ink hover:opacity-60 transition-opacity duration-200 block"
                   >
                     {link.label}
                   </Link>
@@ -143,7 +143,7 @@ export default function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setMenuOpen(false)}
-                  className="text-base text-ink hover:opacity-60 transition-opacity duration-200 block"
+                  className="no-underline text-base text-ink hover:opacity-60 transition-opacity duration-200 block"
                 >
                   Contact
                 </Link>

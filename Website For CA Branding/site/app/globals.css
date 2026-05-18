@@ -26,6 +26,12 @@
   * {
     border-color: var(--color-rule);
   }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+  }
 }
 
 @layer utilities {

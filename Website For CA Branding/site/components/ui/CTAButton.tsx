@@ -14,7 +14,7 @@ export default function CTAButton({
   className = '',
 }: CTAButtonProps) {
   const base =
-    'inline-block font-medium text-cta px-6 py-3 border rounded transition-all duration-200'
+    'inline-block no-underline font-medium text-cta px-6 py-3 border rounded transition-all duration-200'
 
   const styles = {
     'outline-inverted':

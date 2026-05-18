@@ -29,7 +29,7 @@ export default function ExecutiveAdvisoryPage() {
   return (
     <>
       <InnerPageHero
-        eyebrow="STRATEGIC ADVISORY  FOR ENTERPRISE TECHNOLOGY"
+        eyebrow="Executive Advisory"
         heading="Executive Market Architecture"
         lead={`Market architecture is the structural foundation that determines how a firm — or its leadership — is positioned, perceived, and placed within a competitive market.
 

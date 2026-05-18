@@ -36,7 +36,7 @@ export default function InnerPageHero({
 
   return (
     <section
-      className="relative px-6 lg:px-8 py-24 lg:py-32 overflow-hidden"
+      className="relative px-6 lg:px-8 py-16 sm:py-24 lg:py-32 overflow-hidden"
       style={{ backgroundColor: bgColor }}
     >
       {darkAurora && (
@@ -73,7 +73,7 @@ export default function InnerPageHero({
       )}
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="mx-auto text-center max-w-4xl">
+        <div className="max-w-[860px] mx-auto">
           {eyebrow && (
             <p className={cn(
               'font-light text-small uppercase tracking-label mb-6',
@@ -89,7 +89,7 @@ export default function InnerPageHero({
             {heading}
           </h1>
 
-          <div className="mt-6 space-y-4 max-w-3xl mx-auto">
+          <div className="mt-6 space-y-4">
             {lead.split('\n\n').filter(Boolean).map((para, i) => (
               <p
                 key={i}
@@ -104,7 +104,7 @@ export default function InnerPageHero({
           </div>
 
           {showCTA && (
-            <div className="mt-10 flex justify-center">
+            <div className="mt-10 flex justify-start">
               <Link
                 href={ctaHref}
                 className={cn(

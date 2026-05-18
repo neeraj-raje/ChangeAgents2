@@ -53,7 +53,7 @@ export default function AboutPage() {
   return (
     <>
       <InnerPageHero
-        eyebrow="STRATEGIC ADVISORY  FOR ENTERPRISE TECHNOLOGY"
+        eyebrow="About"
         heading="About Change Agents"
         bgColor="#0A0F1A"
         darkAurora={{

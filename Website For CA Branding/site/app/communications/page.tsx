@@ -29,7 +29,7 @@ export default function CommunicationsPage() {
   return (
     <>
       <InnerPageHero
-        eyebrow="STRATEGIC ADVISORY  FOR ENTERPRISE TECHNOLOGY"
+        eyebrow="PR & Communications"
         heading="Communications, Visibility & Narrative Activation"
         bgColor="#0F1318"
         darkAurora={{

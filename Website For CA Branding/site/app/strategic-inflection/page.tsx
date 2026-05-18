@@ -28,7 +28,7 @@ export default function StrategicInflectionPage() {
   return (
     <>
       <InnerPageHero
-        eyebrow="STRATEGIC ADVISORY  FOR ENTERPRISE TECHNOLOGY"
+        eyebrow="Strategic Inflection"
         heading="Strategic Inflection Advisory"
         lead={`Market architecture is the structural foundation that determines how a firm — or its leadership — is positioned, perceived, and placed within a competitive market.
 

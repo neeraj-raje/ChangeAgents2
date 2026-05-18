@@ -70,7 +70,7 @@ export default function SharbariChakrabortyPage() {
               <div className="mt-6">
                 <Link
                   href="/the-collective"
-                  className="font-medium text-cta text-aurora-blue-600 hover:text-aurora-blue-500 transition-colors duration-200"
+                  className="font-medium text-cta text-[#35506B] hover:opacity-60 transition-opacity duration-200"
                 >
                   &larr; Back to The Collective
                 </Link>

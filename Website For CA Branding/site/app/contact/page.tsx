@@ -75,28 +75,33 @@ export default function ContactPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-[#F6F3EE] px-6 lg:px-8 py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto">
-          <SectionLabel className="mb-12 text-center block">TESTIMONIALS</SectionLabel>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <section className="bg-white px-8 py-12">
+        <div className="max-w-4xl mx-auto">
+          <SectionLabel className="mb-10 text-center block">TESTIMONIALS</SectionLabel>
 
-            <div className="bg-white border border-rule rounded-xl p-8">
-              <p className="font-normal text-body text-[#111827]" style={{ lineHeight: '1.75' }}>
-                &ldquo;Change Agents have helped us in creating a brand image of Inspan to higher degree among our target segments.&rdquo;
-              </p>
-              <div className="mt-6">
-                <p className="font-medium text-small text-[#111827]">Sudhir S</p>
-                <p className="font-normal text-small text-[#52606D]">MD, Inspan Infotech</p>
+          <div className="flex flex-col md:flex-row">
+
+            <div className="flex-1 md:pr-12 md:border-r border-[#0B1F33]/15 pb-10 md:pb-0">
+              <div className="border-l-[3px] border-[#0B1F33]/20 pl-5">
+                <p className="font-serif text-[17px] text-[#111827]" style={{ lineHeight: '1.65' }}>
+                  &ldquo;Change Agents have helped us in creating a brand image of Inspan to higher degree among our target segments.&rdquo;
+                </p>
+                <div className="mt-5">
+                  <p className="font-medium text-[13px] text-[#111827]">Sudhir S</p>
+                  <p className="text-[13px] text-[#52606D]">MD, Inspan Infotech</p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white border border-rule rounded-xl p-8">
-              <p className="font-normal text-body text-[#111827]" style={{ lineHeight: '1.75' }}>
-                &ldquo;I absolutely recommend Change Agents as my first choice of marketing partner, especially to foreign businesses entering the Indian market.&rdquo;
-              </p>
-              <div className="mt-6">
-                <p className="font-medium text-small text-[#111827]">Dominik Stahmann</p>
-                <p className="font-normal text-small text-[#52606D]">Marketing Manager – NEMEAI, Sophos</p>
+            <div className="flex-1 md:pl-12 pt-10 md:pt-0">
+              <div className="border-l-[3px] border-[#0B1F33]/20 pl-5">
+                <p className="font-serif text-[17px] text-[#111827]" style={{ lineHeight: '1.65' }}>
+                  &ldquo;I absolutely recommend Change Agents as my first choice of marketing partner, especially to foreign businesses entering the Indian market.&rdquo;
+                </p>
+                <div className="mt-5">
+                  <p className="font-medium text-[13px] text-[#111827]">Dominik Stahmann</p>
+                  <p className="text-[13px] text-[#52606D]">Marketing Manager – NEMEAI, Sophos</p>
+                </div>
               </div>
             </div>
 

@@ -209,13 +209,7 @@ export default function HomePage() {
                 PR & Integrated Communications
               </h2>
               <p className="font-normal text-body text-[#52606D] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
-                After defining the market architecture, we activate the narrative through media strategy and by engaging influencers and analysts.
-              </p>
-              <p className="font-normal text-body text-[#52606D] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
-                PR & Integrated communications aligns media, digital visibility, and strategic messaging into a cohesive narrative to build long term credibility and influence.
-              </p>
-              <p className="font-normal text-body text-[#52606D] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
-                The objective is not promotional campaigns, but sustained communication to create a consistent market perception.
+                Strategic clarity that stays internal changes nothing. Once market architecture is defined, we support its activation through media strategy, analyst engagement, and narrative presence – as the continuation of strategic thinking into the market.
               </p>
               <Link
                 href="/communications"

@@ -1,8 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import InnerPageHero from '@/components/sections/InnerPageHero'
-import InnerCardGrid from '@/components/sections/InnerCardGrid'
 import DarkCTAFooter from '@/components/sections/DarkCTAFooter'
 import SectionLabel from '@/components/ui/SectionLabel'
 
@@ -30,132 +28,146 @@ export const metadata: Metadata = {
 export default function TheCollectivePage() {
   return (
     <>
-      <InnerPageHero
-        eyebrow="STRATEGIC ADVISORY  FOR ENTERPRISE TECHNOLOGY"
-        heading="The Change Agents Collective"
-        lead="A curated group of independent senior advisors who collaborate with Change Agents on select engagements requiring a broader combination of perspectives."
-        showCTA={false}
-        bgColor="#0C1420"
-        darkAurora={{
-          bands: 'repeating-linear-gradient(100deg, #0C1420 0%, #111E30 15%, #182840 30%, #1E3350 45%, #111E30 60%, #0C1420 75%)',
-          glow1: 'rgba(96, 165, 250, 0.1)',
-          glow1Pos: { top: '-15%', left: '25%' },
-          glow2: 'rgba(14, 30, 55, 0.5)',
-          glow2Pos: { bottom: '-20%', left: '10%' },
-        }}
-      />
+      {/* Hero */}
+      <section
+        className="relative px-6 lg:px-8 py-24 lg:py-32 overflow-hidden"
+        style={{ backgroundColor: '#0C1420' }}
+      >
+        {/* Aurora bands */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute -inset-[10px] opacity-30 blur-[80px] animate-aurora will-change-[background-position]"
+            style={{
+              backgroundImage: 'repeating-linear-gradient(100deg, #0C1420 0%, #111E30 15%, #182840 30%, #1E3350 45%, #111E30 60%, #0C1420 75%)',
+              backgroundSize: '400% 100%',
+            }}
+          />
+        </div>
+        <div
+          className="absolute pointer-events-none w-[600px] h-[500px] rounded-full blur-[120px]"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(96, 165, 250, 0.1) 0%, transparent 70%)',
+            top: '-15%',
+            left: '25%',
+          }}
+        />
+        <div
+          className="absolute pointer-events-none w-[400px] h-[350px] rounded-full blur-[100px]"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(14, 30, 55, 0.5) 0%, transparent 70%)',
+            bottom: '-20%',
+            left: '10%',
+          }}
+        />
 
-      {/* Context */}
-      <section className="bg-[#F6F3EE] px-6 lg:px-8 py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-bold text-title text-[#111827] mb-6">
-              Change Agents operates as a founder-led strategic advisory practice.
-            </h2>
-            <p className="font-normal text-body text-[#52606D]">
-              In situations where business challenges extend beyond positioning into leadership, behaviour,
-              or organisational alignment, we work with a select group of independent advisors. These are
-              individuals who bring deep experience and operate in their own right — and collaborate with
-              us where required.
-            </p>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <p
+            className="font-light text-small uppercase tracking-label text-white/50 mb-6"
+          >
+            The Collective
+          </p>
+          <h1 className="font-bold text-display text-white mb-6">
+            The Change Agents Collective
+          </h1>
+
+          <p className="font-normal text-lead text-white/70 italic mb-8">
+            Enterprise positioning problems rarely arrive in isolation.
+          </p>
+
+          <div className="flex flex-col gap-6 sm:flex-row sm:gap-10">
+            <div style={{ flex: 1 }}>
+              <p className="font-normal text-lead text-white/70">
+                A leadership transition carries behavioural complexity. A market repositioning surfaces organisational misalignment. A founder&apos;s narrative often reflects — or conceals — something deeper about how they lead.
+              </p>
+              <p className="font-normal text-lead text-white/70 mt-4">
+                The Change Agents Collective is a small group of senior independents — each operating in their own right — whose domains intersect precisely where positioning work becomes complex.
+              </p>
+            </div>
+            <div style={{ flex: 1 }}>
+              <p className="font-normal text-lead text-white/70">
+                We work together selectively, when the situation calls for it, with Change Agents anchoring the strategic direction.
+              </p>
+              <p className="font-normal text-lead text-white/70 mt-4">
+                This is not a network. It is not a marketplace. It is a set of relationships built over time, activated by context, and held together by a shared philosophy: that clarity at the structural level requires more than one lens.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* How This Works */}
-      <section className="bg-[#E8E2D8] px-6 lg:px-8 py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-medium text-heading text-[#111827] mb-8 text-center">How This Works</h2>
-          <InnerCardGrid
-            items={[
-              { title: 'Independent identity',        body: 'Each advisor maintains an independent identity and practice' },
-              { title: 'Selective engagement',        body: 'Engagement with Change Agents is selective and context-driven' },
-              { title: 'Trust-based collaboration',   body: 'Collaboration is based on trust, relevance, and problem fit' },
-              { title: 'Not a marketplace',           body: 'We do not operate as a network or marketplace' },
-              { title: 'Intentionally small',         body: 'The Collective is intentionally small and curated' },
-            ]}
-            cardBgColor="#D4CCBB"
-            tickColor="#8B7D67"
-          />
+      {/* How This Works / The Approach — side-by-side */}
+      <div className="flex flex-col lg:flex-row">
+        <div className="flex-1 bg-[#E8E2D8] px-8 lg:px-16 py-20 lg:py-28">
+          <h2 className="font-medium text-heading text-[#111827] mb-8">How This Works</h2>
+          <div className="space-y-4 max-w-md">
+            <p className="font-normal text-body text-[#52606D]" style={{ lineHeight: '1.75' }}>
+              Each advisor maintains an independent identity and practice.
+            </p>
+            <p className="font-normal text-body text-[#52606D]" style={{ lineHeight: '1.75' }}>
+              Engagement is selective and context-driven. Collaboration is based on trust, relevance, and fit — not retainer or roster.
+            </p>
+          </div>
         </div>
-      </section>
-
-      {/* When the Collective Is Engaged */}
-      <section className="bg-[#F5FBFF] px-6 lg:px-8 py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-medium text-heading text-[#111827] mb-8 text-center">When the Collective Is Engaged</h2>
-          <InnerCardGrid
-            items={[
-              { title: 'Leadership alignment required',       body: 'Strategic positioning requires leadership alignment' },
-              { title: 'Organisational transitions',          body: 'Business transitions require behavioural or organisational shifts' },
-              { title: 'Leadership and market perception',    body: 'Founder or leadership journeys intersect with market perception' },
-              { title: 'Multiple lenses needed',             body: 'Complex situations require multiple perspectives beyond communication' },
-            ]}
-            cardBgColor="#D9E9F5"
-            tickColor="#5A7FA8"
-          />
+        <div className="flex-1 bg-[#F6F3EE] px-8 lg:px-16 py-20 lg:py-28">
+          <h2 className="font-medium text-heading text-[#111827] mb-8">The Approach</h2>
+          <div className="space-y-4 max-w-md">
+            <p className="font-normal text-body text-[#52606D]" style={{ lineHeight: '1.75' }}>
+              All engagements remain anchored in Change Agents&apos; strategic direction.
+            </p>
+            <p className="font-normal text-body text-[#52606D]" style={{ lineHeight: '1.75' }}>
+              The Collective extends the work — bringing depth in leadership, behaviour, and organisational alignment at the moments when positioning alone isn&apos;t enough.
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* Advisors */}
       <section className="bg-[#F5FBFF] px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-6xl mx-auto">
-          <SectionLabel className="mb-8 text-center block">ADVISORS</SectionLabel>
+          <SectionLabel className="mb-10 text-center block">ADVISORS</SectionLabel>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-            {/* Sharbari Chakraborty */}
-            <div className="flex flex-col items-center text-center">
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-5 border border-rule">
-                <Image
-                  src="/assets/images/SharbariChakraborty_ProfilePic.webp"
-                  alt="Sharbari Chakraborty — Leadership Coach and Organisational Transformation Advisor"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover grayscale-photo"
-                />
+          <div className="bg-white border border-rule rounded-xl overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              {/* Photo */}
+              <div className="md:w-72 flex-shrink-0">
+                <div className="aspect-square w-full overflow-hidden">
+                  <Image
+                    src="/assets/images/SharbariChakraborty_ProfilePic.webp"
+                    alt="Sharbari Chakraborty — Communication Advisor, Narrative Strategist and Coach"
+                    width={288}
+                    height={288}
+                    className="w-full h-full object-cover grayscale-photo"
+                  />
+                </div>
               </div>
-              <h3 className="font-medium text-body text-[#111827]">Sharbari Chakraborty</h3>
-              <p className="font-normal text-small text-[#52606D] mt-1">
-                Leadership Coach | Organisational Transformation
-              </p>
-              <Link
-                href="/the-collective/sharbari-chakraborty"
-                className="inline-block font-medium text-cta text-[#35506B] mt-4 hover:opacity-60 transition-opacity"
-              >
-                View Profile &rarr;
-              </Link>
-            </div>
 
-            {/* Placeholder 2 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-5 bg-aurora-blue-50 border border-aurora-blue-100 flex items-center justify-center">
-                <span className="text-4xl text-muted/30 font-light">JD</span>
+              {/* Bio */}
+              <div className="flex flex-col justify-between p-8 lg:p-10 flex-1">
+                <div>
+                  <h3 className="font-bold text-heading text-[#111827]">Sharbari Chakraborty</h3>
+                  <p className="font-normal text-small text-[#52606D] mt-1">
+                    Communication Advisor | Narrative Strategist | Coach
+                  </p>
+                  <div className="mt-5 space-y-3 max-w-prose">
+                    <p className="font-normal text-body text-[#52606D]" style={{ lineHeight: '1.75' }}>
+                      Sharbari works with senior leaders, founders and organisations on communication strategy, narrative development and leadership presence.
+                    </p>
+                    <p className="font-normal text-body text-[#52606D]" style={{ lineHeight: '1.75' }}>
+                      Her work sits at the intersection of communication, narrative and leadership — helping individuals and organisations align how they think, speak and show up, especially when communication starts to impact clarity, alignment or decision making.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="/the-collective/sharbari-chakraborty"
+                    className="inline-block font-medium text-cta text-[#35506B] hover:opacity-60 transition-opacity"
+                  >
+                    View Profile &rarr;
+                  </Link>
+                </div>
               </div>
-              <h3 className="font-medium text-body text-[#111827]">John Doe</h3>
-              <p className="font-normal text-small text-[#52606D] mt-1">Advisory Role</p>
-              <span className="inline-block font-medium text-cta text-muted mt-4 cursor-not-allowed opacity-50">
-                View Profile &rarr;
-              </span>
             </div>
-
-            {/* Placeholder 3 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-5 bg-aurora-blue-50 border border-aurora-blue-100 flex items-center justify-center">
-                <span className="text-4xl text-muted/30 font-light">JD</span>
-              </div>
-              <h3 className="font-medium text-body text-[#111827]">Jane Doe</h3>
-              <p className="font-normal text-small text-[#52606D] mt-1">Advisory Role</p>
-              <span className="inline-block font-medium text-cta text-muted mt-4 cursor-not-allowed opacity-50">
-                View Profile &rarr;
-              </span>
-            </div>
-
           </div>
-
-          <p className="font-normal text-small text-[#52606D] text-center mt-10 max-w-xl mx-auto">
-            Engagements are structured based on context, with Change Agents anchoring strategic direction.
-          </p>
         </div>
       </section>
 

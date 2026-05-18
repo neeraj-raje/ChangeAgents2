@@ -214,12 +214,12 @@ export default function SharbariChakrabortyPage() {
             <HorizontalRule />
 
             {/* Perspective */}
-            <div className="bg-aurora-blue-50 border border-aurora-blue-100 rounded-lg p-8 lg:p-10">
-              <p className="font-normal text-small uppercase tracking-widest text-muted mb-6">
+            <div>
+              <p className="text-[11px] uppercase tracking-label text-muted mb-4">
                 Sharbari&apos;s Perspective
               </p>
               <blockquote>
-                <p className="font-light italic text-lead text-ink leading-relaxed">
+                <p className="font-serif italic text-[22px] text-[#0B1F33]" style={{ lineHeight: '1.7' }}>
                   &ldquo;The most powerful stories are not always the loudest. They are the clearest.&rdquo;
                 </p>
               </blockquote>

@@ -86,15 +86,15 @@ export default function HomePage() {
       <AuroraHero />
 
       {/* Strategic Statement */}
-      <section className="bg-[#F6F3EE] px-6 lg:px-8 pt-24 lg:pt-28 pb-24 lg:pb-32">
+      <section className="bg-white px-6 lg:px-8 pt-24 lg:pt-28 pb-24 lg:pb-32 border-t border-b border-[rgba(0,0,0,0.08)]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left Column */}
             <div>
-              <h2 className="font-bold text-title text-[#111827] ">
+              <h2 className="font-serif font-normal text-title text-[#374151]">
                 Strategy precedes visibility.
               </h2>
-              <p className="font-normal text-lead text-[#1F2933] mt-8">
+              <p className="font-serif italic text-[#374151] mt-8" style={{ fontSize: '1.25rem', lineHeight: '1.65' }}>
                 Communications amplify positioning.
                 <br />
                 Positioning shapes perception.
@@ -102,7 +102,7 @@ export default function HomePage() {
             </div>
             {/* Right Column */}
             <div>
-              <p className="font-normal text-body text-[#52606D] max-w-[65ch]" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
+              <p className="font-light text-body text-[#52606D] max-w-[65ch]" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
                 Market architecture is how an enterprise technology firm — or its leadership — is structurally placed within a competitive market.
               </p>
               <p className="font-normal text-body text-[#52606D] max-w-[65ch] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
@@ -123,13 +123,13 @@ export default function HomePage() {
       </section>
 
       {/* Divider */}
-      <div className="border-b border-rule"></div>
+      <div className="border-b border-[rgba(0,0,0,0.08)]"></div>
 
       {/* Focus Areas */}
-      <section className="bg-[#E8E2D8] px-6 lg:px-8 pt-12 lg:pt-20 pb-24 lg:pb-32">
+      <section className="bg-white px-6 lg:px-8 pt-12 lg:pt-20 pb-24 lg:pb-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <h2 className="font-bold text-title text-[#111827]">
+            <h2 className="font-serif font-normal text-title text-[#374151]">
               Focus Areas
             </h2>
           </div>
@@ -139,10 +139,10 @@ export default function HomePage() {
                 key={area.label}
                 className="pt-8 lg:pt-0 lg:px-10 first:lg:pl-0 last:lg:pr-0"
               >
-                <p className="font-medium text-[1.375rem] text-[#111827] ">
+                <p className="text-[19px] font-semibold leading-[1.4] text-[#111827]">
                   {area.label}
                 </p>
-                <p className="font-normal text-body text-[#52606D] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
+                <p className="font-light text-body text-[#52606D] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
                   {area.heading}
                 </p>
                 {area.body && (
@@ -171,7 +171,7 @@ export default function HomePage() {
           <div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               <div className="lg:col-span-3">
-                <div className="rounded-lg overflow-hidden border-2 border-gray-300 shadow-sm">
+                <div className="rounded-lg overflow-hidden border border-[rgba(0,0,0,0.1)]">
                   <Image
                     src="/assets/team/shubhendu-nath.webp"
                     alt="Founder, Change Agents Strategic Advisory"
@@ -182,13 +182,13 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="lg:col-span-9">
-                <h2 className="font-medium text-heading text-[#111827]">
+                <h2 className="font-serif font-normal text-title text-[#374151]">
                   Founder-Led Advisory
                 </h2>
-                <p className="font-normal text-body text-[#52606D] max-w-[65ch] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
+                <p className="font-light text-body text-[#52606D] max-w-[65ch] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
                   All strategic engagements are led directly by <span className="text-[#111827] font-medium">Shubhendu Nath</span>, drawing on two decades of enterprise technology ecosystem experience across India and Asia-Pacific.
                 </p>
-                <p className="font-normal text-body text-[#52606D] max-w-[65ch] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
+                <p className="font-light text-body text-[#52606D] max-w-[65ch] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
                   Change Agents is supported by institutional depth and execution capability where activation is required.
                 </p>
               </div>
@@ -205,10 +205,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center">
             <div className="max-w-[65ch] mx-auto">
-              <h2 className="font-medium text-heading text-[#111827]">
+              <h2 className="font-serif font-normal text-title text-[#374151]">
                 PR & Integrated Communications
               </h2>
-              <p className="font-normal text-body text-[#52606D] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
+              <p className="font-light text-body text-[#52606D] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
                 Strategic clarity that stays internal changes nothing. Once market architecture is defined, we support its activation through media strategy, analyst engagement, and narrative presence – as the continuation of strategic thinking into the market.
               </p>
               <Link
@@ -228,10 +228,10 @@ export default function HomePage() {
       {/* Two Decades in Enterprise Technology */}
       <section className="bg-[#FAFBFC] px-6 lg:px-8 pt-12 lg:pt-20 pb-24 lg:pb-32">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-medium text-heading text-[#111827]">
+          <h2 className="font-serif font-normal text-title text-[#374151]">
             Two Decades in Enterprise Technology
           </h2>
-          <p className="font-normal text-body text-[#52606D] max-w-[65ch] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
+          <p className="font-light text-body text-[#52606D] max-w-[65ch] mt-4" style={{ lineHeight: '1.75', letterSpacing: '-0.01em' }}>
             Our work spans infrastructure, cybersecurity, SaaS, distribution, and digital transformation ecosystems — across founders, country heads, and global technology firms.
           </p>
           <ClientLogoGrid />

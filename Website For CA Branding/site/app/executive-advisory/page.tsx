@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
-import InnerPageHero from '@/components/sections/InnerPageHero'
-import InnerCardGrid from '@/components/sections/InnerCardGrid'
+import Link from 'next/link'
 import EngageSection from '@/components/sections/EngageSection'
 import DarkCTAFooter from '@/components/sections/DarkCTAFooter'
 
@@ -28,66 +27,125 @@ export const metadata: Metadata = {
 export default function ExecutiveAdvisoryPage() {
   return (
     <>
-      <InnerPageHero
-        eyebrow="Executive Advisory"
-        heading="Executive Market Architecture"
-        lead={`Market architecture is the structural foundation that determines how a firm — or its leadership — is positioned, perceived, and placed within a competitive market.
+      {/* Hero */}
+      <section
+        className="relative px-6 lg:px-8 py-16 sm:py-24 lg:py-32 overflow-hidden border-b border-[rgba(0,0,0,0.08)]"
+        style={{ backgroundColor: '#F5FBFF' }}
+      >
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <h1
+            className="font-serif font-extralight text-[#374151]"
+            style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', lineHeight: '1.05', letterSpacing: '-0.02em' }}
+          >
+            Executive Market Architecture
+          </h1>
 
-We work with founders, CEOs, and senior leaders to clarify how they are positioned within their industry — and how that positioning translates into influence, opportunity, and long-term relevance.`}
-        bgColor="#0B1520"
-        darkAurora={{
-          bands: 'repeating-linear-gradient(100deg, #0B1520 0%, #0F2340 15%, #162C4A 30%, #1A3A5C 45%, #0F2340 60%, #0B1520 75%)',
-          glow1: 'rgba(37, 99, 235, 0.2)',
-          glow1Pos: { top: '-10%', right: '5%' },
-          glow2: 'rgba(10, 22, 40, 0.6)',
-          glow2Pos: { bottom: '-15%', left: '0%' },
-        }}
-      />
+          <hr className="border-none my-10 lg:my-14" style={{ borderTopWidth: '1px', borderTopStyle: 'solid', borderTopColor: 'rgba(0,0,0,0.12)' }} />
 
-      {/* When This Matters */}
-      <section className="bg-[#F6F3EE] px-6 lg:px-8 py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-medium text-heading text-[#111827] mb-8 text-center">When This Matters</h2>
-          <InnerCardGrid
-            items={[
-              { title: 'Leadership Entry',     body: 'Stepping into a new leadership role' },
-              { title: 'Career Transition',    body: 'Navigating career transition or displacement' },
-              { title: 'Influence Expansion',  body: 'Expanding influence within the ecosystem' },
-              { title: 'Executive Visibility', body: 'Preparing for board or investor visibility' },
-              { title: 'Category Ownership',   body: 'Building long-term category association' },
-            ]}
-            cardBgColor="#E8DFD4"
-            tickColor="#A8927F"
-          />
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-20">
+            <p className="font-serif italic text-[#374151]" style={{ fontSize: '1.25rem', lineHeight: '1.65' }}>
+              The strategic foundation that shapes how leadership is positioned, perceived, and understood within the market.
+            </p>
+
+            <div>
+              <p className="font-normal text-lead text-[#52606D]" style={{ lineHeight: '1.7' }}>
+                We work with founders, CEOs, and senior leaders to clarify how they are positioned within their industry — and how that positioning translates into influence, opportunity, and long-term relevance.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/contact"
+                  className="font-medium text-cta text-[#111827] no-underline pb-0.5 hover:opacity-70 transition-opacity duration-200"
+                  style={{ borderBottom: '1px solid rgba(0,0,0,0.4)' }}
+                >
+                  Request a Conversation &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* What We Work On */}
-      <section className="bg-[#E8E2D8] px-6 lg:px-8 py-20 lg:py-28">
+      {/* When Positioning Becomes Important + What We Work On */}
+      <section className="bg-white px-6 lg:px-8 py-16 lg:py-20 border-t border-b border-[rgba(0,0,0,0.08)]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-medium text-heading text-[#111827] mb-8 text-center">What We Work On</h2>
-          <InnerCardGrid
-            items={[
-              { title: 'Strategic positioning and differentiation', body: 'Defining a distinct market position that sets you apart from competitors.' },
-              { title: 'Leadership narrative and identity',          body: 'Crafting a clear, credible story that reflects who you are and how you lead.' },
-              { title: 'Industry relevance and perception',          body: 'Shaping how your expertise and value are understood within your industry.' },
-              { title: 'Visibility architecture',                    body: 'Designing where and how you show up to build the right kind of visibility.' },
-              { title: 'Long-term influence design',                 body: 'Building sustained authority that compounds over time.' },
-            ]}
-            cardBgColor="#D4CCBB"
-            tickColor="#8B7D67"
-          />
+
+          {/* When Positioning Becomes Important */}
+          <h2 className="font-serif font-normal text-title text-[#374151] mb-12">When Positioning Becomes Important</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
+            <div>
+              {[
+                {
+                  title: 'Stepping into a larger leadership role',
+                  body: 'A new leadership role brings greater visibility, expectations, and influence. Executive branding ensures that others perceive your transition with clarity, confidence, and credibility.',
+                },
+                {
+                  title: 'Preparing for a career transition',
+                  body: 'Career transitions are not just about changing roles. Positioning yourself for them is equally important. The right visibility, perception, and industry narrative can shape how confidently you step into what comes next.',
+                },
+                {
+                  title: 'Building influence within your industry',
+                  body: 'Expertise alone is rarely enough. Consistent visibility and a clear professional narrative help establish credibility, strengthen trust, and expand your influence within the industry.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="border-l-[1.5px] border-[rgba(0,0,0,0.15)] pl-5 py-6 first:pt-0">
+                  <p className="text-[19px] font-semibold leading-[1.4] text-[#111827] mb-3">{item.title}</p>
+                  <p className="text-body font-light leading-[1.7] text-[#374151]">{item.body}</p>
+                </div>
+              ))}
+            </div>
+            <div>
+              {[
+                {
+                  title: 'After a major professional milestone',
+                  body: 'A promotion, award, acquisition, funding round, or successful turnaround can become a defining career moment. The right visibility can help turn that achievement into long-term professional credibility and opportunities.',
+                },
+                {
+                  title: 'When your online presence no longer reflects your experience',
+                  body: 'Your reputation often forms before conversations begin. Executive branding helps align your public presence with the leader you\'ve become.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="border-l-[1.5px] border-[rgba(0,0,0,0.15)] pl-5 py-6 first:pt-0">
+                  <p className="text-[19px] font-semibold leading-[1.4] text-[#111827] mb-3">{item.title}</p>
+                  <p className="text-body font-light leading-[1.7] text-[#374151]">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* What We Work On */}
+          <div className="mt-20">
+            <h2 className="font-serif font-normal text-title text-[#374151] mb-8">What We Work On</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1">
+              {[
+                'Strategic positioning and differentiation',
+                'Leadership narrative and identity',
+                'Industry relevance and perception',
+                'Visibility architecture',
+                'Long-term influence design',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 py-2">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#98c451" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 mt-0.5">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  <span className="text-[19px] font-normal leading-[1.4] text-[#111827]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
         </div>
       </section>
 
       {/* How We Engage */}
       <section className="bg-[#F5FBFF] px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-6xl mx-auto">
-          <EngageSection
-            eyebrow="HOW WE ENGAGE"
-            heading="All work is direct, confidential, and founder-led."
-            body="We do not operate as a content engine or visibility service. We work at the level of positioning before amplification begins."
-          />
+          <div className="[&_h2]:font-serif [&_h2]:font-normal [&_h2]:text-[1.2rem] [&_p]:font-light [&_p]:text-[#374151] [&_p]:text-[1.75rem] [&_p]:leading-[1.4] [&_p]:max-w-[900px] [&_p]:mx-auto">
+            <EngageSection
+              heading="How We Engage"
+              body="All work is direct, confidential, and founder-led. We do not function as a content production or visibility agency. Our focus is on shaping strategic positioning before communication and amplification begin."
+            />
+          </div>
         </div>
       </section>
 

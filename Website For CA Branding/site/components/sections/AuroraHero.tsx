@@ -39,7 +39,8 @@ export default function AuroraHero() {
         <div className="relative z-10 max-w-6xl mx-auto w-full px-6 lg:px-8 py-20 lg:py-0">
           <div className="mx-auto text-center max-w-4xl">
             <h1
-              className="font-bold text-display text-white"
+              className="font-serif font-extralight text-white"
+              style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', lineHeight: '1.05', letterSpacing: '-0.02em' }}
             >
               Shaping Enterprise
               <br />
@@ -47,7 +48,7 @@ export default function AuroraHero() {
             </h1>
 
             <p
-              className="font-normal text-lead text-white/80 mt-8 max-w-3xl mx-auto"
+              className="font-light text-lead text-white/80 mt-8 max-w-3xl mx-auto"
             >
               We advise enterprise technology companies and senior leaders on strategic positioning, competitive architecture, and narrative alignment at moments of growth, transition, and scale.
             </p>

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
-import InnerPageHero from '@/components/sections/InnerPageHero'
-import InnerCardGrid from '@/components/sections/InnerCardGrid'
+import Link from 'next/link'
+import EngageSection from '@/components/sections/EngageSection'
 import DarkCTAFooter from '@/components/sections/DarkCTAFooter'
 
 export const metadata: Metadata = {
@@ -27,56 +27,125 @@ export const metadata: Metadata = {
 export default function StrategicInflectionPage() {
   return (
     <>
-      <InnerPageHero
-        eyebrow="Strategic Inflection"
-        heading="Strategic Inflection Advisory"
-        lead={`Market architecture is the structural foundation that determines how a firm — or its leadership — is positioned, perceived, and placed within a competitive market.
+      {/* Hero */}
+      <section
+        className="relative px-6 lg:px-8 py-16 sm:py-24 lg:py-32 overflow-hidden border-b border-[rgba(0,0,0,0.08)]"
+        style={{ backgroundColor: '#F5FBFF' }}
+      >
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <h1
+            className="font-serif font-extralight text-[#374151]"
+            style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', lineHeight: '1.05', letterSpacing: '-0.02em' }}
+          >
+            Strategic Inflection Advisory
+          </h1>
 
-At critical moments, positioning decisions carry disproportionate impact.
+          <hr className="border-none my-10 lg:my-14" style={{ borderTopWidth: '1px', borderTopStyle: 'solid', borderTopColor: 'rgba(0,0,0,0.12)' }} />
 
-We work with leaders and firms during high-stakes transitions where clarity, timing, and narrative alignment are essential.`}
-        bgColor="#091918"
-        darkAurora={{
-          bands: 'repeating-linear-gradient(100deg, #091918 0%, #0F2A28 15%, #0D3330 30%, #134E4A 45%, #0D2E2B 60%, #091918 75%)',
-          glow1: 'rgba(13, 148, 136, 0.18)',
-          glow1Pos: { top: '-10%', right: '10%' },
-          glow2: 'rgba(6, 78, 59, 0.3)',
-          glow2Pos: { top: '20%', left: '-5%' },
-        }}
-      />
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-20">
+            <p className="font-serif italic text-[#374151]" style={{ fontSize: '1.25rem', lineHeight: '1.65' }}>
+              At critical moments, positioning decisions carry disproportionate impact.
+            </p>
+
+            <div>
+              <p className="font-normal text-lead text-[#52606D]" style={{ lineHeight: '1.7' }}>
+                We work with leaders and firms during high-stakes transitions where clarity, timing, and narrative alignment are essential. M&amp;A, leadership change, market entry, or structural repositioning — each demands a different kind of strategic attention.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/contact"
+                  className="font-medium text-cta text-[#111827] no-underline pb-0.5 hover:opacity-70 transition-opacity duration-200"
+                  style={{ borderBottom: '1px solid rgba(0,0,0,0.4)' }}
+                >
+                  Request a Conversation &rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Typical Engagements */}
-      <section className="bg-[#F6F3EE] px-6 lg:px-8 py-20 lg:py-28">
+      <section className="bg-white px-6 lg:px-8 py-16 lg:py-20 border-t border-b border-[rgba(0,0,0,0.08)]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-medium text-heading text-[#111827] mb-8 text-center">Typical Engagements</h2>
-          <InnerCardGrid
-            items={[
-              { title: 'Leadership transitions',                   body: '' },
-              { title: 'Market entry or expansion',                body: '' },
-              { title: 'M&A and pre/post acquisition positioning', body: '' },
-              { title: 'Crisis or reputation recalibration',       body: '' },
-              { title: 'Structural repositioning',                 body: '' },
-            ]}
-            cardBgColor="#E8DFD4"
-            tickColor="#A8927F"
-          />
+          <h2 className="font-serif font-normal text-title text-[#374151] mb-12">Typical Engagements</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
+            <div>
+              {[
+                {
+                  title: 'Leadership transitions',
+                  body: 'Maintain strategic continuity and market confidence during periods of leadership change. Stay aligned and preserve trust through transition.',
+                },
+                {
+                  title: 'Market entry or expansion',
+                  body: 'Enter new markets and expand into new areas with strategic clarity. Grow with confidence, alignment, and a clear market position.',
+                },
+                {
+                  title: 'M&A and pre/post-acquisition positioning',
+                  body: 'Navigate mergers and acquisitions with clear strategic positioning. Maintain continuity, alignment, and stakeholder confidence before and after transition.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="border-l-[1.5px] border-[rgba(0,0,0,0.15)] pl-5 py-6 first:pt-0">
+                  <p className="text-[19px] font-semibold leading-[1.4] text-[#111827] mb-3">{item.title}</p>
+                  <p className="text-body font-light leading-[1.7] text-[#374151]">{item.body}</p>
+                </div>
+              ))}
+            </div>
+
+            <div>
+              {[
+                {
+                  title: 'Crisis or reputation recalibration',
+                  body: 'Rebuild trust and restore confidence during challenging moments. Respond with clarity, stability, and strategic direction.',
+                },
+                {
+                  title: 'Structural repositioning',
+                  body: 'Redefine how a company is perceived as the business evolves. Re-align market perception with changing priorities, structure, and direction.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="border-l-[1.5px] border-[rgba(0,0,0,0.15)] pl-5 py-6 first:pt-0">
+                  <p className="text-[19px] font-semibold leading-[1.4] text-[#111827] mb-3">{item.title}</p>
+                  <p className="text-body font-light leading-[1.7] text-[#374151]">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Nature of Work */}
-      <section className="bg-[#E8E2D8] px-6 lg:px-8 py-20 lg:py-28">
+      <section className="bg-white px-6 lg:px-8 py-16 lg:py-20 border-b border-[rgba(0,0,0,0.08)]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-medium text-heading text-[#111827] mb-8 text-center">Nature of Work</h2>
-          <InnerCardGrid
-            items={[
-              { title: 'Duration',    body: 'Short-duration, high-intensity' },
-              { title: 'Involvement', body: 'Direct founder involvement' },
-              { title: 'Character',   body: 'Confidential and context-driven' },
-              { title: 'Focus',       body: 'Focused on clarity, not volume' },
-            ]}
-            cardBgColor="#D4CCBB"
-            tickColor="#8B7D67"
-          />
+          <h2 className="font-serif font-normal text-title text-[#374151] mb-8">Nature of Work</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1">
+            {[
+              'Short-duration, high-intensity',
+              'Direct founder involvement',
+              'Confidential and context-driven',
+              'Focused on clarity, not volume',
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 py-2">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#98c451" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 mt-0.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span className="text-[19px] font-normal leading-[1.4] text-[#111827]">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* How We Engage */}
+      <section className="bg-[#F5FBFF] px-6 lg:px-8 py-20 lg:py-28">
+        <div className="max-w-6xl mx-auto">
+          <div className="[&_h2]:font-serif [&_h2]:font-normal [&_h2]:text-[1.2rem] [&_p]:font-light [&_p]:text-[#374151] [&_p]:text-[1.75rem] [&_p]:leading-[1.4] [&_p]:max-w-[900px] [&_p]:mx-auto">
+            <EngageSection
+              heading="How We Engage"
+              body="Strategic Inflection engagements are structured around a specific moment or transition. They are shorter and more intensive than ongoing advisory retainers. All work is direct, confidential, and founder-led."
+            />
+          </div>
         </div>
       </section>
 

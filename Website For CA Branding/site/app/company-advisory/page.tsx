@@ -29,53 +29,40 @@ export const metadata: Metadata = {
 export default function CompanyAdvisoryPage() {
   return (
     <>
-      {/* EXPERIMENTAL HERO — revert: restore InnerPageHero block */}
+      {/* WHITE HERO EXPERIMENT — revert: git checkout ca-dark-hero -- app/company-advisory/page.tsx */}
       <section
-        className="relative px-6 lg:px-8 py-16 sm:py-24 lg:py-32 overflow-hidden"
-        style={{ backgroundColor: '#0D0F1E' }}
+        className="relative px-6 lg:px-8 py-16 sm:py-24 lg:py-32 overflow-hidden border-b border-[rgba(0,0,0,0.08)]"
+        style={{ backgroundColor: '#F5FBFF' }}
       >
-        {/* Aurora bands */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute -inset-[10px] opacity-30 blur-[80px] animate-aurora will-change-[background-position]"
-            style={{
-              backgroundImage: 'repeating-linear-gradient(100deg, #0D0F1E 0%, #141635 15%, #1E1B4B 30%, #2A2164 45%, #141635 60%, #0D0F1E 75%)',
-              backgroundSize: '400% 100%',
-            }}
-          />
-        </div>
-        <div className="absolute pointer-events-none w-[600px] h-[500px] rounded-full blur-[120px]" style={{ background: 'radial-gradient(ellipse, rgba(99, 90, 210, 0.15) 0%, transparent 70%)', top: '-5%', left: '5%' }} />
-        <div className="absolute pointer-events-none w-[400px] h-[350px] rounded-full blur-[100px]" style={{ background: 'radial-gradient(ellipse, rgba(139, 92, 246, 0.09) 0%, transparent 70%)', bottom: '-10%', right: '5%' }} />
-
         <div className="relative z-10 max-w-6xl mx-auto">
           {/* Heading */}
           <h1
-            className="font-serif font-normal text-white"
+            className="font-serif font-extralight text-[#374151]"
             style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', lineHeight: '1.05', letterSpacing: '-0.02em' }}
           >
             Company Market Architecture
           </h1>
 
           {/* Divider */}
-          <hr className="border-none border-t border-white/20 my-10 lg:my-14" style={{ borderTopWidth: '1px', borderTopStyle: 'solid', borderTopColor: 'rgba(255,255,255,0.2)' }} />
+          <hr className="border-none my-10 lg:my-14" style={{ borderTopWidth: '1px', borderTopStyle: 'solid', borderTopColor: 'rgba(0,0,0,0.12)' }} />
 
           {/* Two-column layout */}
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-20">
             {/* Left — italic serif */}
-            <p className="font-serif italic text-white/80" style={{ fontSize: '1.25rem', lineHeight: '1.65' }}>
+            <p className="font-serif italic text-[#374151]" style={{ fontSize: '1.25rem', lineHeight: '1.65' }}>
               The structural foundation that determines how a firm is positioned, perceived, and placed within a competitive market.
             </p>
 
             {/* Right — body + CTA */}
             <div>
-              <p className="font-normal text-lead text-white/70" style={{ lineHeight: '1.7' }}>
+              <p className="font-normal text-lead text-[#52606D]" style={{ lineHeight: '1.7' }}>
                 We work with enterprise technology firms to define how they are positioned in competitive markets — beyond product messaging and marketing narratives. Before amplification. Before visibility. At the point where clarity either exists — or doesn&apos;t.
               </p>
               <div className="mt-8">
                 <Link
                   href="/contact"
-                  className="font-medium text-cta text-white no-underline pb-0.5 hover:opacity-70 transition-opacity duration-200"
-                  style={{ borderBottom: '1px solid rgba(255,255,255,0.6)' }}
+                  className="font-medium text-cta text-[#111827] no-underline pb-0.5 hover:opacity-70 transition-opacity duration-200"
+                  style={{ borderBottom: '1px solid rgba(0,0,0,0.4)' }}
                 >
                   Request a Conversation &rarr;
                 </Link>
@@ -84,12 +71,12 @@ export default function CompanyAdvisoryPage() {
           </div>
         </div>
       </section>
-      {/* END EXPERIMENTAL HERO */}
+      {/* END WHITE HERO EXPERIMENT */}
 
       {/* Where We Focus + Typical Situations */}
       <section className="bg-white px-6 lg:px-8 py-16 lg:py-20 border-t border-b border-[rgba(0,0,0,0.08)]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif font-normal text-title text-[#111827] mb-12">Where We Focus</h2>
+          <h2 className="font-serif font-normal text-title text-[#374151] mb-12">Where We Focus</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
             {/* Left — 3 items */}
@@ -137,7 +124,7 @@ export default function CompanyAdvisoryPage() {
 
           {/* Typical Situations */}
           <div className="mt-20">
-            <h2 className="font-serif font-normal text-title text-[#111827] mb-8">Typical Situations</h2>
+            <h2 className="font-serif font-normal text-title text-[#374151] mb-8">Typical Situations</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1">
               {[
                 "Scaling beyond early growth stage",

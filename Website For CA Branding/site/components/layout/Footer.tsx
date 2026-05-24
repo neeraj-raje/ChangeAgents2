@@ -17,6 +17,7 @@ const col2: NavItem[] = [
 const col3: NavItem[] = [
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
+  { href: '/contact#faq', label: 'FAQs' },
 ]
 
 const col4: NavItem[] = [

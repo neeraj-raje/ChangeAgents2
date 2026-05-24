@@ -42,7 +42,7 @@ const config: Config = {
         heading: ['1.875rem', { lineHeight: '1.3' }],
         h3: ['1.375rem', { lineHeight: '1.4' }],
         lead: ['1.125rem', { lineHeight: '1.6' }],
-        body: ['1rem', { lineHeight: '1.65' }],
+        body: ['1.0625rem', { lineHeight: '1.65' }],
         small: ['0.8125rem', { lineHeight: '1.5', letterSpacing: '0.02em' }],
         cta: ['0.9375rem', { lineHeight: '1.4', letterSpacing: '0.01em' }],
       },

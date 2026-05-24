@@ -24,7 +24,7 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-8">
-      <h3 className="font-medium text-h3 text-white mb-8">Start the conversation</h3>
+      <h3 className="font-serif font-normal text-white mb-8" style={{ fontSize: '1.1rem' }}>Start the conversation</h3>
 
       {submitted ? (
         <div className="bg-aurora-blue-500/20 border border-aurora-blue-400/40 rounded-lg p-6 text-center">
@@ -67,6 +67,13 @@ export default function ContactForm() {
           </button>
           <p className="font-light text-small text-white/60 text-center mt-4">
             We typically respond within 48 hours.
+          </p>
+          <hr style={{ border: 'none', borderTop: '0.5px solid rgba(255,255,255,0.15)', margin: '1.25rem 0' }} />
+          <p style={{ fontSize: '15px', fontWeight: 500 }} className="text-white/70 text-center">
+            Have questions first?{' '}
+            <a href="#faq" className="underline underline-offset-[3px] text-white/70">
+              Read our FAQs &rarr;
+            </a>
           </p>
         </form>
       )}

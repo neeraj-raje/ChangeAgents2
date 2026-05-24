@@ -34,7 +34,7 @@ const team = [
   {
     image: '/assets/team/neeraj-raje.webp',
     alt: 'Neeraj Raje — Digital and Narrative Strategy, Change Agents',
-    title: 'Digital & Narrative Strategy and Activation',
+    title: 'Digital Strategy and Activation',
     subtitle: 'Led by Neeraj Raje',
     body: 'Where required, strategic thinking is translated into visible platforms through content, digital presence, and narrative amplification.',
   },

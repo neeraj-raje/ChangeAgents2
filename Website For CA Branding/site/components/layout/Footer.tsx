@@ -57,15 +57,20 @@ export default function Footer() {
 
         {/* Logo + nav grid */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 mb-12">
-          <Link href="/" aria-label="Change Agents — Home" className="flex-shrink-0">
-            <Image
-              src="/assets/logo/ChangeAgents_Logo_new.png"
-              alt="Change Agents"
-              width={179}
-              height={51}
-              className="h-[2.048rem] w-auto object-contain logo-white"
-            />
-          </Link>
+          <div className="flex-shrink-0 flex flex-col gap-2">
+            <Link href="/" aria-label="Change Agents — Home">
+              <Image
+                src="/assets/logo/ChangeAgents_Logo_new.png"
+                alt="Change Agents"
+                width={179}
+                height={51}
+                className="h-[2.048rem] w-auto object-contain logo-white"
+              />
+            </Link>
+            <p className="font-light text-small text-[#A9BAC8]" style={{ letterSpacing: '0.01em' }}>
+              Strategic Advisory For Enterprise Technology
+            </p>
+          </div>
 
           <nav className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16" aria-label="Footer navigation">
             <NavColumn links={col1} />

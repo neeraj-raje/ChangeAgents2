@@ -7,22 +7,19 @@ const col1: NavItem[] = [
   { href: '/executive-advisory', label: 'Executive Advisory' },
   { href: '/company-advisory', label: 'Company Advisory' },
   { href: '/strategic-inflection', label: 'Strategic Inflection' },
+  { href: '/communications', label: 'PR & Communications' },
 ]
 
 const col2: NavItem[] = [
-  { href: '/communications', label: 'PR & Communications' },
   { href: '/the-collective', label: 'The Collective' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 const col3: NavItem[] = [
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/contact#faq', label: 'FAQs' },
-]
-
-const col4: NavItem[] = [
   { href: 'https://www.linkedin.com/company/change-agents/', label: 'LinkedIn', external: true },
   { href: 'https://changeagentspr.wordpress.com/', label: 'Blog', external: true },
+  { href: '/contact#faq', label: 'FAQs' },
 ]
 
 function NavColumn({ links }: { links: NavItem[] }) {
@@ -55,7 +52,7 @@ function NavColumn({ links }: { links: NavItem[] }) {
 
 export default function Footer() {
   return (
-    <footer className="font-sohne bg-[#0B1F33] text-white">
+    <footer className="font-sohne bg-[#0c1522] text-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 py-12">
 
         {/* Logo + nav grid */}
@@ -70,11 +67,10 @@ export default function Footer() {
             />
           </Link>
 
-          <nav className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-16" aria-label="Footer navigation">
+          <nav className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-16" aria-label="Footer navigation">
             <NavColumn links={col1} />
             <NavColumn links={col2} />
             <NavColumn links={col3} />
-            <NavColumn links={col4} />
           </nav>
         </div>
 

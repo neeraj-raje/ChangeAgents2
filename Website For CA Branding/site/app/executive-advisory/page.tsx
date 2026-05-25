@@ -35,7 +35,7 @@ export default function ExecutiveAdvisoryPage() {
         <div className="relative z-10 max-w-6xl mx-auto">
           <h1
             className="font-serif font-extralight text-[#374151]"
-            style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', lineHeight: '1.05', letterSpacing: '-0.02em' }}
+            style={{ fontSize: 'clamp(3rem, 6vw, 5.5rem)', lineHeight: '1.05', letterSpacing: '-0.02em' }}
           >
             Executive Market Architecture
           </h1>
